@@ -15,7 +15,7 @@ class RandomForestClassifier:
         # JSON to pandas DataFrame
         input_data = pd.DataFrame(input_data, index=[0])
         # fill missing values
-        input_data.fillna(self.values_fill_missing)
+        input_data.fillna(self.values_fill_missing, inplace=True)
         # convert categoricals
         for column in [
             "workclass",
